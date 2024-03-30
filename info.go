@@ -35,23 +35,23 @@ func init() {
 }
 
 type BMServer struct {
-	Data *BMServerData `json:"data" binding:"required"`
+	Data *BMServerData `json:"data"`
 }
 
 type BMServerData struct {
-	Id         string              `json:"id" binding:"required"`
-	Attributes *BMServerAttributes `json:"attributes" binding:"required"`
+	Id         string              `json:"id"`
+	Attributes *BMServerAttributes `json:"attributes"`
 }
 
 type BMServerAttributes struct {
-	Players    int              `json:"players" binding:"required"`
-	MaxPlayers int              `json:"maxPlayers" binding:"required"`
-	Details    *BMServerDetails `json:"details" binding:"required"`
+	Players    int              `json:"players"`
+	MaxPlayers int              `json:"maxPlayers"`
+	Details    *BMServerDetails `json:"details"`
 }
 
 type BMServerDetails struct {
-	Map         string `json:"map" binding:"required"`
-	PublicQueue int    `json:"squad_publicQueue" binding:"required"`
+	Map         string `json:"map"`
+	PublicQueue int    `json:"squad_publicQueue"`
 }
 
 func main() {
